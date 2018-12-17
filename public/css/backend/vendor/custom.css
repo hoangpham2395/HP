@@ -1,0 +1,202 @@
+
+.pd-10 {
+    padding: 10px;
+}
+
+.pd-20 {
+    padding: 20px;
+}
+
+.pd-30 {
+    padding: 30px;
+}
+
+.pd-40 {
+    padding: 40px;
+}
+
+.pd-50 {
+    padding: 50px;
+}
+
+.pd-60 {
+    padding: 60px;
+}
+
+.pd-70 {
+    padding: 70px;
+}
+
+.pd-80 {
+    padding: 80px;
+}
+
+.pd-90 {
+    padding: 90px;
+}
+
+.pd-100 {
+    padding: 100px;
+}
+
+.m-t-5 {
+    padding-top: 5px;
+}
+
+.content-header > h1 {
+    padding-bottom: 5px;
+    color: #727272;
+    font-weight: bold
+}
+
+.chart-container .box {
+    border: none;
+}
+
+.content-header > .breadcrumb {
+    background: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 0px;
+    position: relative;
+    float: none;
+    top: 1px;
+    left: 0px;
+}
+
+.skin-blue .sidebar-menu > li.header {
+    font-size: 18px;
+    color: #f1f1f1;
+    font-weight: bold
+}
+
+.content-header {
+    padding: 15px 0 10px 15px;
+}
+
+.skin-blue .sidebar-menu > li.header {
+    background: #232f35;
+}
+.info-box-icon {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    display: block;
+    float: left;
+    height: 60px;
+    width: 10px;
+    font-size: 0;
+    line-height: 0;
+    background: #7F7F7F;
+}
+
+.info-box-content {
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+
+.box-header .box-title.chart-title {
+    color: #7F7F7F;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.info-box-text {
+    display: block;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #7F7F7F;
+    font-weight: bold;
+    text-overflow: ellipsis;
+}
+
+.label.status {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    padding: 10px;
+    padding-top: 13px;
+    border-radius: 0;
+    display: inline-block;
+}
+
+.label-red {
+    background: red;
+}
+
+.info-box-content .device-label {
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.device-block p.title {
+    font-size: 20px;
+    color: #7f7f7f;
+    margin-top: 10px;
+}
+.device-block p.title > i {
+    margin-right: 5px;
+}
+.device-block .progress {
+    width: 320px;
+    display: inline-block;
+    margin-bottom: 0;
+    height: 5px;
+}
+.device-block .progress .progress-bar {
+    width: 60px;
+    margin: 0 2px;
+    background: #f50600;
+    display: inline-block;
+}
+.device-block .progress .progress-bar:nth-child(2),
+.device-block .progress .progress-bar:nth-child(4) {
+    background: #f9be00;
+}
+.device-block .progress .progress-bar:nth-child(3) {
+    background: #32b048;
+}
+.device-block .progress-text-bottom {
+    width: 300px;
+    display: inline-block;
+}
+.device-block .progress-text-bottom span{
+    display: inline-block;
+    width: 66px;
+    margin: 0 -2px;
+}
+.device-block .meter-result {
+    font-size: 30px;
+    font-weight: bold;
+    color: #7f7f7f;
+}
+.device-info-box .status{
+    width: 100%;
+}
+
+@media only screen and (max-width: 414px) {
+    .pdxs-5 {
+        padding: 5px;
+    }
+    .label.status {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        font-weight: 500;
+        border: none;
+        padding: 8px;
+        padding-top: 9px;
+        border-radius: 0;
+        display: inline-block;
+    }
+    .device-info-box .label.status {
+        width: 100%;
+    }
+}
