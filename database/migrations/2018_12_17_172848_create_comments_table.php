@@ -12,8 +12,13 @@ class CreateCommentsTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name', 128);
+            $table->text('comment');
+            $table->integer('parent_id');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }

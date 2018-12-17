@@ -12,8 +12,12 @@ class CreateJobsTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('job_name', 64);
+            $table->actionBy();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }

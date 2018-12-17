@@ -12,8 +12,16 @@ class CreateProductAttrTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('attr_name', 64);
+            $table->integer('group_id');
+            $table->char('type')->default(1);
+            $table->string('length', 32)->nullable()->default(256);
+            $table->char('is_null')->default(0)->comment('0:null; 1:not null');
+            $table->actionBy();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }

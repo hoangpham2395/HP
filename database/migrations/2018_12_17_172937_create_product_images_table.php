@@ -12,8 +12,14 @@ class CreateProductImagesTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('product_id');
+            $table->string('image', 256);
+            $table->string('type', 1)->default(1);
+            $table->actionBy();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }

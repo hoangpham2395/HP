@@ -12,8 +12,16 @@ class CreateProductsTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('product_name', 64);
+            $table->integer('brand_id');
+            $table->integer('category_id');
+            $table->string('model', 128);
+            $table->string('made_in', 128);
+            $table->actionBy();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }

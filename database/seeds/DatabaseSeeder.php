@@ -24,8 +24,9 @@ class AdminUserInfoTableSeeder extends Seeder
         \App\Model\Entities\AdminUserInfo::truncate();
         App\Model\Entities\AdminUserInfo::create(array(
             'email' => 'admin@gmail.com',
-            'userPW' => 'admin123',
+            'password' => 'admin123',
             'role_type' => 1,
+            'employee_id' => 1
         ));
     }
 

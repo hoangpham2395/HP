@@ -19,6 +19,7 @@ class CreateAdminTable extends \App\Database\Migration\Create
             $table->string('password', 100);
             $table->integer('employee_id')->length(11);
             $table->char('role_type', 1)->comment('1:super_admin; 2:admin; 3:employee; 4:shipper')->default(2);
+            $table->actionBy();
             $table->timestamps();
             $table->softDeletes();
         });

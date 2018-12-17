@@ -12,8 +12,13 @@ class CreateCategoriesTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('category_name', 64);
+            $table->string('category_image', 256)->nullable();
+            $table->actionBy();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }

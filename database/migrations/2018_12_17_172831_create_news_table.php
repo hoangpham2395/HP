@@ -12,8 +12,13 @@ class CreateNewsTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title', 256);
+            $table->text('content');
+            $table->actionBy();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }

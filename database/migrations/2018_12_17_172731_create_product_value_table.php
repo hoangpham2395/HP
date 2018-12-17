@@ -12,8 +12,14 @@ class CreateProductValueTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('product_id');
+            $table->integer('attr_id');
+            $table->string('value', 256);
+            $table->actionBy();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }

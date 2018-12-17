@@ -12,8 +12,15 @@ class CreateOrderDetailTable extends \App\Database\Migration\Create
      */
     public function up()
     {
-        Schema::table($this->getTable(), function (Blueprint $table) {
-            //
+        Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('order_id');
+            $table->integer('product_id');
+            $table->integer('quantity');
+            $table->double('unit_price');
+            $table->actionBy();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 }
