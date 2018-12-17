@@ -15,7 +15,7 @@ class AdminUserInfo extends User
 
     protected $hidden = ['password'];
 
-    public function setUserPWAttribute($value)
+    public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = genPassword($value);
     }
