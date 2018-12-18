@@ -33,10 +33,9 @@ class AdminUserInfo extends BaseValidator
     protected function _getRulesDefault()
     {
         $rules = [
-            'userID' => 'required|max:100' . $this->_getUniqueInDbRule($this->getModel()->getTableName(), ['userID', $this->getModel()->getKeyName()]),
-            'emailAddress' => 'nullable|email|max:100' . $this->_getUniqueInDbRule($this->getModel()->getTableName(), ['emailAddress', $this->getModel()->getKeyName()]),
-            'userPW' => 'nullable|same:userCPW|min:6|max:8',
-            'phoneNumber' => 'nullable|phone',
+            'email' => 'required|email|max:100' . $this->_getUniqueInDbRule($this->getModel()->getTableName(), ['email', $this->getModel()->getKeyName()]),
+            'password' => 'nullable|same:password_confirm|min:6|max:8',
+            'role_type' => 'required',
         ];
         return $rules;
     }
@@ -48,8 +47,8 @@ class AdminUserInfo extends BaseValidator
     {
         return [
             'rules' => $this->_buildRules([
-                'userPW' => 'required|same:userCPW|min:6|max:100',
-                'userCPW' => 'required|min:6|max:100',
+                'password' => 'required|same:password_confirm|min:6|max:100',
+                'password_confirm' => 'required|min:6|max:100',
             ])
         ];
     }
