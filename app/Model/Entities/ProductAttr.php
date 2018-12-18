@@ -7,5 +7,5 @@ class ProductAttr extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "product_attr";
-    protected $fillable = [];
+    protected $fillable = ['attr_name', 'group_id', 'type', 'length', 'is_null'];
 }

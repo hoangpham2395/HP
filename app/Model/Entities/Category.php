@@ -7,5 +7,5 @@ class Category extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "categories";
-    protected $fillable = [];
+    protected $fillable = ['category_name', 'category_image'];
 }

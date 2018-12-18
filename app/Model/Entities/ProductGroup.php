@@ -7,5 +7,5 @@ class ProductGroup extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "product_group";
-    protected $fillable = [];
+    protected $fillable = ['group'];
 }

@@ -7,5 +7,5 @@ class Order extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "orders";
-    protected $fillable = [];
+    protected $fillable = ['username', 'total_price', 'sex', 'address', 'tel', 'status'];
 }

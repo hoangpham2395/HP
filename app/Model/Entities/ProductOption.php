@@ -7,5 +7,5 @@ class ProductOption extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "product_option";
-    protected $fillable = [];
+    protected $fillable = ['product_id', 'color', 'price', 'price_sale', 'sale', 'quantity', 'origin', 'warranty', 'image'];
 }

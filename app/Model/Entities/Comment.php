@@ -7,5 +7,5 @@ class Comment extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "comments";
-    protected $fillable = [];
+    protected $fillable = ['name', 'comment', 'parent_id'];
 }

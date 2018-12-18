@@ -7,5 +7,5 @@ class News extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "news";
-    protected $fillable = [];
+    protected $fillable = ['title', 'content'];
 }

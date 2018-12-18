@@ -7,5 +7,5 @@ class Brand extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "brands";
-    protected $fillable = [];
+    protected $fillable = ['brand_name', 'brand_image'];
 }

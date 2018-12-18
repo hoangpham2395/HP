@@ -7,5 +7,5 @@ class ProductValue extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "product_value";
-    protected $fillable = [];
+    protected $fillable = ['product_id', 'attr_id', 'value'];
 }

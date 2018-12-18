@@ -7,5 +7,5 @@ class ProductImage extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "product_images";
-    protected $fillable = [];
+    protected $fillable = ['product_id', 'type', 'image'];
 }

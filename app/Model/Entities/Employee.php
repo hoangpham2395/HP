@@ -7,5 +7,5 @@ class Employee extends ModelSoftDelete
 {
     protected $primaryKey = 'id';
     protected $table = "employees";
-    protected $fillable = [];
+    protected $fillable = ['name', 'email', 'tel', 'avatar', 'address', 'job_id', 'id_number', 'bank_account', 'description'];
 }
